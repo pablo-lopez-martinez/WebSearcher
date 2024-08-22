@@ -20,7 +20,7 @@ realizar búsquedas, evaluar queries, y optimizar parámetros de modelos de recu
 
 `IndexTrecCovid` es una clase que se encarga de indexar la colección de documentos TREC-COVID utilizando Apache Lucene. Esta clase permite configurar diversos parámetros relacionados con la indexación, como el modo de apertura del índice y el modelo de recuperación de información.
 
-## Argumentos
+### Argumentos
 
 La clase `IndexTrecCovid` acepta los siguientes argumentos de línea de comandos:
 
@@ -37,11 +37,11 @@ La clase `IndexTrecCovid` acepta los siguientes argumentos de línea de comandos
   - `jm <lambda>`: Utiliza el modelo de lenguaje con suavización de Jelinek-Mercer, donde `lambda` es el parámetro de suavización (un valor entre 0 y 1).
   - `bm25 <k1>`: Utiliza el modelo BM25, donde `k1` es el parámetro que ajusta la sensibilidad a la frecuencia del término. Para BM25, el valor por defecto de `b` es 0.75.
 
-# SearchEvalTrecCovid
+## SearchEvalTrecCovid
 
 `SearchEvalTrecCovid` es una clase que se encarga de buscar y evaluar consultas en la colección de documentos TREC-COVID utilizando Apache Lucene. Esta clase permite configurar diversos parámetros relacionados con el modelo de recuperación de información, la ruta del índice, el corte en el ranking y la visualización de los resultados.
 
-## Argumentos
+### Argumentos
 
 La clase `SearchEvalTrecCovid` acepta los siguientes argumentos de línea de comandos:
 
@@ -60,11 +60,11 @@ La clase `SearchEvalTrecCovid` acepta los siguientes argumentos de línea de com
   - `<int1>`: Ejecuta y evalúa solo la consulta identificada por el entero `int1`.
   - `<int1-int2>`: Ejecuta y evalúa el rango de consultas identificadas por los enteros `int1` a `int2`, ambos inclusive.
 
-# TrainingTestTrecCovid
+## TrainingTestTrecCovid
 
 `TrainingTestTrecCovid` es una clase que se encarga de encontrar el valor óptimo de los parámetros de suavización para el modelo de lenguaje de Jelinek-Mercer (JM) y el parámetro `k1` para el modelo BM25, utilizando un conjunto de consultas de entrenamiento. Luego, aplica estos valores óptimos a un conjunto de consultas de prueba (test). La evaluación se realiza utilizando varias métricas de recuperación de información.
 
-## Argumentos
+### Argumentos
 
 La clase `TrainingTestTrecCovid` acepta los siguientes argumentos de línea de comandos:
 
@@ -82,11 +82,11 @@ La clase `TrainingTestTrecCovid` acepta los siguientes argumentos de línea de c
 
 - `-index <ruta>`: Define la ruta del directorio que contiene el índice Lucene. Este argumento es obligatorio.
 
-# Compare
+## Compare
 
 `Compare` es una clase que se encarga de realizar un test de significancia estadística para comparar los resultados de dos modelos de recuperación de información utilizando las mismas consultas de prueba. Esto permite determinar si las diferencias en rendimiento entre los dos modelos son estadísticamente significativas.
 
-## Argumentos
+### Argumentos
 
 La clase `Compare` acepta los siguientes argumentos de línea de comandos:
 
